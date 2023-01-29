@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4609802853162841060}
   - component: {fileID: 2837855709288994872}
   - component: {fileID: -6401957546144277810}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
