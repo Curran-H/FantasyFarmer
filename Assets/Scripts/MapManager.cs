@@ -83,8 +83,20 @@ public class MapManager : MonoBehaviour {
         placeableObject.OnPlace(positions);
     }
 
+    /// <summary> Destroys an object </summary>
+    public void DestroyObject(Vector3Int[] positions) {
+        foreach(Vector3Int pos in positions) {
+            UnOccupyTileAt(pos);
+            m_placedObjects.Remove(pos);
+        }
+    }
+
     public void OccupyTileAt(Vector3Int cellPosition) {
         m_placementMap.SetTile(cellPosition, m_dummyTile);
+    }
+
+    public void UnOccupyTileAt(Vector3Int cellPosition) {
+        m_placementMap.SetTile(cellPosition, null);
     }
 
     /// <summary>

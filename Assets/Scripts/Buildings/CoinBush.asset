@@ -16,4 +16,5 @@ MonoBehaviour:
   BuildingName: CoinBush
   BuildingWidth: 1
   BuildingHeight: 1
+  BuildingHealth: 2
   BuildingPrefab: {fileID: 3192646992898675254, guid: 57366553223819a47be5dde06c53f821, type: 3}

@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4020bab0355ee9439157940fdd370b8, type: 3}
-  m_Name: Flower
+  m_Name: Corn
   m_EditorClassIdentifier: 
-  BuildingSprite: {fileID: 1855241471, guid: 8fb3f552713faf144aa154281a5dd612, type: 3}
-  BuildingName: Flower
+  BuildingSprite: {fileID: 21300000, guid: b47b648a13e1e79489f9809838a99e15, type: 3}
+  BuildingName: Corn
   BuildingWidth: 1
   BuildingHeight: 1
-  BuildingPrefab: {fileID: 5307810261925124651, guid: a4be9a1471617d04ba2bc892a694950e, type: 3}
+  BuildingHealth: 1
+  BuildingPrefab: {fileID: 2414348714845670919, guid: a4be9a1471617d04ba2bc892a694950e, type: 3}
