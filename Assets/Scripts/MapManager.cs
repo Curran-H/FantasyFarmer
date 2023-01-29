@@ -86,6 +86,7 @@ public class MapManager : MonoBehaviour {
     public void DestroyObject(Vector3Int[] positions) {
         foreach(Vector3Int pos in positions) {
             UnOccupyTileAt(pos);
+            m_placedObjects.Remove(pos);
         }
     }
 

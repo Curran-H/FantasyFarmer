@@ -15,5 +15,14 @@ public abstract class Weapon : MonoBehaviour {
     ///<summary> Determines which direction the weapon will fire </summary>
     protected int m_directionIndex;
     
-    public abstract void Fire();
+    /// <summary> Fires the weapon if it's ready </summary>
+    public virtual void Fire() {
+        if(Time.time >= m_currentWeaponCooldown) {
+            FiremodeFire();
+            m_currentWeaponCooldown = Time.time + m_weaponCooldown;
+        }
+    }
+    
+    /// <summary> Determines how the weapon should fire based on it's firemode </summary>
+    protected abstract void FiremodeFire();
 }

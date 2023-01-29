@@ -16,5 +16,5 @@ MonoBehaviour:
   EnemyHealth: 4
   EnemySpeed: 1.5
   EnemyAttackTimer: 3
-  EnemyAttackRange: 0.25
+  EnemyAttackRange: 0.5
   EnemyAttackDamage: 1

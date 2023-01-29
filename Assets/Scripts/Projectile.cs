@@ -13,13 +13,15 @@ public class Projectile : MonoBehaviour {
         m_projectileSpeed = speed;
         m_direction = direction;
         m_damage = damage;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         m_maxLifetime += Time.time;
     }
 
     public void Update() {
         transform.position += (Vector3) m_direction * m_projectileSpeed * Time.deltaTime;
         if(Time.time >= m_maxLifetime) {
-
+            OnDeath();
         }
     }
 

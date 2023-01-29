@@ -4,16 +4,9 @@ using UnityEngine;
 
 public class ProjectileWeapon : Weapon {
 
-    // Same as m_raycastOffset in LineTargetSeeker
+    // Same as m_raycastOffset in LineTargetSeeker. Should always be .5 .5 for 1x1 towers, anything larger will require a different solution
     [SerializeField] private Vector3 m_originOffset = new Vector3(0.5f, 0.5f);
     [SerializeField] private Projectile m_toSpawn;
-
-    public override void Fire() {
-        if(Time.time >= m_currentWeaponCooldown) {
-            FiremodeFire();
-            m_currentWeaponCooldown = Time.time + m_weaponCooldown;
-        }
-    }
 
     private void IncrementDirection() {
         m_directionIndex++;
@@ -22,7 +15,7 @@ public class ProjectileWeapon : Weapon {
         }
     }
 
-    private void FiremodeFire() {
+    protected override void FiremodeFire() {
         switch(m_fireMode) {
             case FireMode.ALTERNATING:
                 CreateAndInitializeProjectile(m_directions[m_directionIndex]);
@@ -36,6 +29,7 @@ public class ProjectileWeapon : Weapon {
         }        
     }
 
+    /// <summary> Creates and initializes a projectile </summary>
     private void CreateAndInitializeProjectile(Vector2 direction) {
         Projectile p = Instantiate(m_toSpawn, transform.position + m_originOffset, Quaternion.identity);
         p.Initialize(direction, 10, 1);

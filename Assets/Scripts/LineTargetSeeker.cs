@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LineTargetSeeker : TargetSeeker {
+    
     [SerializeField] private bool m_pierceTargets;
     [SerializeField] private int m_maxDistance;
 
