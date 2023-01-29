@@ -14,13 +14,14 @@ public class PlayerController : MonoBehaviour {
     private Vector3 m_mousePosition;
 
 
+
     private void Update() {
         m_mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         m_mousePosition = new Vector3(m_mousePosition.x, m_mousePosition.y, 0);
 
         CheckInput();
         UpdateState();
-
+        m_selectedBuilding = BuildingManager.Instance.getBuilding();
         transform.position += m_input.normalized * m_movementSpeed * Time.deltaTime;
     }
 
