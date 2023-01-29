@@ -33,6 +33,7 @@ public class MapManager : MonoBehaviour {
     }
 
     public void Placing(Vector3 position, Building building) {
+        m_placementGhost.sprite = building.BuildingSprite;
         Vector3Int cellPos = WorldToCell(position);
         m_placementGhost.transform.position = cellPos; 
         bool isValid = IsValidPlacement(position, building);
