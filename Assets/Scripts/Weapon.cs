@@ -23,6 +23,13 @@ public abstract class Weapon : MonoBehaviour {
         }
     }
     
+    protected virtual void IncrementDirection() {
+        m_directionIndex++;
+        if(m_directionIndex >= m_directions.Count) {
+            m_directionIndex = 0;
+        }
+    }
+
     /// <summary> Determines how the weapon should fire based on it's firemode </summary>
     protected abstract void FiremodeFire();
 }

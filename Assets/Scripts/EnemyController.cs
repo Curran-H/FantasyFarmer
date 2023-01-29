@@ -84,7 +84,6 @@ public class EnemyController : MonoBehaviour {
     }
 
     private void ChangeState(EnemyState state) {
-        // Debug.Log("Enemy chaning state to: " + state.ToString());
         m_enemyState = state;
         switch(m_enemyState) {
             case EnemyState.MOVING:

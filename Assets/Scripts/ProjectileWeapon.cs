@@ -8,13 +8,6 @@ public class ProjectileWeapon : Weapon {
     [SerializeField] private Vector3 m_originOffset = new Vector3(0.5f, 0.5f);
     [SerializeField] private Projectile m_toSpawn;
 
-    private void IncrementDirection() {
-        m_directionIndex++;
-        if(m_directionIndex >= m_directions.Count) {
-            m_directionIndex = 0;
-        }
-    }
-
     protected override void FiremodeFire() {
         switch(m_fireMode) {
             case FireMode.ALTERNATING:
