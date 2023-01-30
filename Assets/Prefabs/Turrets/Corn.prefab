@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2414348714845670919}
   - component: {fileID: 4148240805084136269}
   - component: {fileID: 510006540892627692}
+  - component: {fileID: -837963832085652447}
   m_Layer: 6
   m_Name: Corn
   m_TagString: Untagged
@@ -166,3 +167,30 @@ MonoBehaviour:
   m_canHit:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &-837963832085652447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930848243167770454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3734d4357b5b4419063870446057a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDeathcallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2414348714845670919}
+        m_TargetAssemblyTypeName: PlaceableObject, Assembly-CSharp
+        m_MethodName: OnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
