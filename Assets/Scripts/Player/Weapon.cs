@@ -14,6 +14,9 @@ public abstract class Weapon : MonoBehaviour {
     [SerializeField] protected List<Vector2> m_directions;
     ///<summary> Determines which direction the weapon will fire </summary>
     protected int m_directionIndex;
+
+    /// <summary> If the weapon requires targets to fire. Useful for turrets that don't "shoot" </summary>
+    [field:SerializeField] public bool RequiresTargetsToFire { get; private set; }
     
     /// <summary> Fires the weapon if it's ready </summary>
     public virtual void Fire() {

@@ -9,7 +9,8 @@ public class EnemyController : MonoBehaviour {
     [field:SerializeField] public Enemy Enemy { get; private set; }
     [SerializeField] public EnemyState m_enemyState;
 
-    private int m_enemyHealth;
+    // private int m_enemyHealth;
+    private Health m_health;
 
     private Vector3 m_movementDirection = new Vector3(-1, 0, 0);
     private float m_nextAttackTime;
@@ -24,7 +25,8 @@ public class EnemyController : MonoBehaviour {
     private void Start() {
         m_animator = GetComponentInChildren<Animator>();
         m_nextAttackTime = Time.time + Enemy.EnemyAttackTimer;
-        m_enemyHealth = Enemy.EnemyHealth;
+        m_health = GetComponent<Health>();
+        m_health.Initialize(Enemy.EnemyHealth);
     }
 
     private void Update() {
@@ -34,13 +36,8 @@ public class EnemyController : MonoBehaviour {
         }
     }
 
-    // Potentially health and damage to be handled in their own component
-    // would make this code more reusable
     public void TakeDamage(int amount) {
-        m_enemyHealth -= amount;
-        if(m_enemyHealth <= 0) {
-            ChangeState(EnemyState.DEAD);
-        }
+        m_health.TakeDamage(amount);
     }
 
     private void Move() {
@@ -99,5 +96,9 @@ public class EnemyController : MonoBehaviour {
                 Destroy(gameObject);
             break;
         }
+    }
+
+    public void OnDeath() {
+        ChangeState(EnemyState.DEAD);
     }
 }
