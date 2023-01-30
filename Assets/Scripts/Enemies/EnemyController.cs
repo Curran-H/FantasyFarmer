@@ -87,12 +87,13 @@ public class EnemyController : MonoBehaviour {
         m_enemyState = state;
         switch(m_enemyState) {
             case EnemyState.MOVING:
+                m_animator.SetBool("isAttacking", false);
                 m_animator.Play("Move");
             break;
             case EnemyState.ATTACKING:
                 // Enemies probably shouldn't attack right away
                 m_nextAttackTime = Time.time + Enemy.EnemyAttackTimer;
-                m_animator.Play("Attack");
+                m_animator.SetBool("isAttacking", true);
             break;
             case EnemyState.DEAD:
                 Destroy(gameObject);
