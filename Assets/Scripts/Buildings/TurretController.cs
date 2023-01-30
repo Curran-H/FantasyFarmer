@@ -15,10 +15,15 @@ public class TurretController : PlaceableObject {
     }
 
     private void Update() {
-        m_targets = m_targetSeeker.SearchForTargets();
-        if(m_targets.Count > 0) {
-            Debug.Log("Targets more than 0");
-            m_weapon.Fire();
+        if(m_targetSeeker != null) {
+            m_targets = m_targetSeeker.SearchForTargets();
+        }
+        if(m_weapon != null) {
+            if(m_weapon.RequiresTargetsToFire) {
+                if(m_targets.Count > 0) {
+                    m_weapon.Fire();
+                }
+            }
         }
     }
 }
