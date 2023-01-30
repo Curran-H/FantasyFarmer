@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5891833718028176373}
   - component: {fileID: 2338485129837905625}
   - component: {fileID: 3192646992898675254}
-  - component: {fileID: 2237049553333915086}
   - component: {fileID: 8790902756088385192}
+  - component: {fileID: 6335472223552145567}
   m_Layer: 6
   m_Name: CoinBush
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 191834442, guid: 2f9e1096f3ebd4241bb8136a9880fd85, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b18e14e6e14abbb4b9e886e930ce8bcf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,26 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Building>k__BackingField: {fileID: 11400000, guid: 000fdb6465f78ab4d92f6a51d691a9e1, type: 2}
---- !u!95 &2237049553333915086
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1444907403179782085}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d55c017d7b424743b2e4a558994b5f1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &8790902756088385192
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -133,16 +113,29 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.40716565, y: 0.5345039}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0.8125, y: 1.875}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.8125, y: 1.875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6892439, y: 0.8054476}
+  m_Size: {x: 0.6892438, y: 0.8054473}
   m_EdgeRadius: 0
+--- !u!114 &6335472223552145567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444907403179782085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7bc2873e75b424ca99299b96ac3052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Building>k__BackingField: {fileID: 11400000, guid: 000fdb6465f78ab4d92f6a51d691a9e1, type: 2}
