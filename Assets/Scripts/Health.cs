@@ -10,6 +10,7 @@ public class Health : MonoBehaviour {
 
     public void Initialize(int maxHealth) {
         MaxHealth = maxHealth;
+        CurrentHealth = maxHealth;
     }
 
     public void TakeDamage(int amount) {
