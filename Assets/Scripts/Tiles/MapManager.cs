@@ -15,7 +15,8 @@ public class MapManager : MonoBehaviour {
 
     [SerializeField] private SpriteRenderer m_placementGhost;
     [SerializeField] private Dictionary<Vector3Int, PlaceableObject> m_placedObjects;
-    // private bool m_isPlacing;
+
+    [SerializeField] private LayerMask m_cantPlace;
 
     private void Awake() {
         if(Instance == null) {
@@ -103,7 +104,12 @@ public class MapManager : MonoBehaviour {
     /// Checks to see if the entire object is placeable
     /// </summary>
     public bool IsValidPlacement(Vector3 position, Building toPlace) {
+        Collider2D overlap = Physics2D.OverlapBox(position, new Vector2(toPlace.BuildingWidth, toPlace.BuildingHeight), 0, m_cantPlace);
+        if(overlap != null)
+            return false;
+
         Vector3Int cellPos = WorldToCell(position);
+        
         for(int x = 0; x < toPlace.BuildingWidth; x++) {
             for(int y = 0; y < toPlace.BuildingHeight; y++) {
                 if(!IsValidTile(new Vector3Int(cellPos.x + x, cellPos.y + y))) {

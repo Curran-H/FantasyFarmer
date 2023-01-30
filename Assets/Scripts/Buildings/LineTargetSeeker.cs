@@ -25,8 +25,9 @@ public class LineTargetSeeker : TargetSeeker {
         
         foreach(Vector2 direction in m_directions) {
             RaycastHit2D hit = Physics2D.Raycast(transform.position+m_raycastOffset, direction, m_maxDistance, m_canHit);
-            Debug.DrawRay(transform.position, direction * m_maxDistance, Color.red, 1f);
+            Debug.DrawRay(transform.position + m_raycastOffset, direction * m_maxDistance, Color.red, 1f);
             if(hit) {
+                Debug.Log("Hit enemy in line target seeker");
                 EnemyController e = hit.collider.GetComponentInParent<EnemyController>();
                 enemies.Add(e);
             }
