@@ -6,9 +6,13 @@ public class LaneSpawner : MonoBehaviour
 {
 
     
-
+    /// <summary>
+    /// allows you to disable a lane from spawning anything
+    /// </summary>
     bool m_isActive;
-    
+    /// <summary>
+    /// defaults to 5 seconds
+    /// </summary>
     public int m_spawnTimeInterval;
     private float m_elapsedTime;
     private GameObject m_enemyToSpawn;

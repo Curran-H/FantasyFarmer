@@ -5,7 +5,7 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour {
 
     public static WaveManager Instance;
-    public List<GameObject> m_enemy=new List<GameObject>();
+    public List<GameObject> m_enemy=new List<GameObject>();//fill the list with different enemies and use their index to set what lanes spawn what specific enemy
     //private List<LaneSpawner> m_laneSpawners= new List<LaneSpawner>();
     [SerializeField]private LaneSpawner[] m_laneSpawners;
     private void Awake() {
