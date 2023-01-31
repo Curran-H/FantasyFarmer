@@ -4,18 +4,46 @@ using UnityEngine;
 
 public class LaneSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField] private Enemy EnemyToSpawn;
-    ///<summary> top lane is 0</summary>
-    [SerializeField] private int laneIndex;
+
+    
+
+    bool m_isActive;
+    
+    public int m_spawnTimeInterval;
+    private float m_elapsedTime;
+    private GameObject m_enemyToSpawn;
     void Start()
     {
-        
+        m_isActive = false;
+        m_spawnTimeInterval = 5;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (m_isActive)//if lane is not active
+        {
+            m_elapsedTime += Time.deltaTime;
+            if (m_elapsedTime > m_spawnTimeInterval)
+            {
+                SpawnEnemy();
+                m_elapsedTime = 0;
+            }
+        }
         
+    }
+    public void SetEnemyToSpawn(GameObject enemy)
+    {
+        m_enemyToSpawn = enemy;
+    }
+    public void SpawnEnemy()
+    {
+        GameObject enemy=Instantiate(m_enemyToSpawn, transform.position, Quaternion.identity);
+    }
+    public void SetActive(bool active)
+    {
+        m_isActive = active;
+
     }
 }
