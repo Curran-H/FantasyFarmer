@@ -44,7 +44,7 @@ public class LaneSpawner : MonoBehaviour
     }
     public void SpawnEnemy()
     {
-        GameObject enemy = Instantiate(m_enemyToSpawn, transform.position, Quaternion.identity);
+        GameObject enemy = Instantiate(m_enemyToSpawn, transform.position, UnityEngine.Quaternion.identity);
     }
     public void SetActive(bool active)
     {

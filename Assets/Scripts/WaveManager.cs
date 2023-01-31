@@ -47,23 +47,29 @@ public class WaveManager : MonoBehaviour
         m_elapsedTime += Time.deltaTime;
         if (m_elapsedTime > laneSwapInterval)
         {
-
+            SelectRandomActiveLanes();
+            ActivateLanes();
+            m_elapsedTime = 0;
         }
 
     }
 
-    //filling array with laneSpawners
+   
 
     void SelectRandomActiveLanes()
     {
 
         for (int i = 0; i < m_maxPossibleActiveLanes; i++)
         {
-            m_activeLaneIndexes.Add((int)Random.Range(0, m_laneSpawners.Length));
+            
+            m_activeLaneIndexes.Add((int)UnityEngine.Random.Range(0, m_laneSpawners.Length));
 
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     void ActivateLanes()
     {
         //deactivate all lanes first
@@ -77,10 +83,18 @@ public class WaveManager : MonoBehaviour
             m_laneSpawners[m_activeLaneIndexes[i]].SetActive(true);
         }
     }
+
+    /// <summary>
+    /// fills array with laneSpawners and sets the enemy to spawn,will replace the enemy part with a separate function when we add more enemies  
+    /// </summary>
     void InitialiseLaneSpawners()
     {
 
         m_laneSpawners = GetComponentsInChildren<LaneSpawner>();
+       foreach(LaneSpawner ls in m_laneSpawners)
+        {
+            ls.SetEnemyToSpawn(m_enemies[0]);
+        }
 
     }
 }
