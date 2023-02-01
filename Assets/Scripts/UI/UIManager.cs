@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -8,7 +9,10 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject[] slots;
     [SerializeField] private GameObject Selector;
-    [SerializeField] private int index = 0;
+    [SerializeField] private GameObject Settings;
+    private int index = 0;
+    private bool gamePaused;
+
 
     private void Awake()
     {
@@ -17,15 +21,25 @@ public class UIManager : MonoBehaviour
             Instance = this;
         }
         Selector.transform.position = slots[0].transform.position;
+        gamePaused = false;
     }
 
     private void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        if (Input.GetKeyDown(KeyCode.Tab)) {
+            if (gamePaused) {
+                Settings.SetActive(false);
+                ResumeGame();
+            } else {
+                Settings.SetActive(true);
+                PauseGame();
+            }
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f && !gamePaused) // forward
         {
             changeSelected(true);
         }
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f && !gamePaused) // backwards
         {
             changeSelected(false);
         }
@@ -62,5 +76,16 @@ public class UIManager : MonoBehaviour
 
             BuildingManager.Instance.setBuilding(index);
         }
+    }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0;
+        gamePaused = true;
+    }
+    void ResumeGame()
+    {
+        Time.timeScale = 1;
+        gamePaused = false;
     }
 }
