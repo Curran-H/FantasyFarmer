@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d4befe83c8deb704aaff7f480df991b4
+guid: 92197cd684cdef547a3a3abcec412cd0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,106 +105,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OrkAttack_0
+      name: FarmerWalk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 88
-        height: 84
-      alignment: 6
+        width: 16
+        height: 30
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8baed8de567fab74dacd339839401442
-      internalID: 503621175
+      spriteID: b1e4646a15deb6d4eb215fa9d59f99b8
+      internalID: -1505259595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OrkAttack_1
+      name: FarmerWalk_1
       rect:
         serializedVersion: 2
-        x: 88
+        x: 16
         y: 0
-        width: 88
-        height: 84
-      alignment: 6
+        width: 16
+        height: 30
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4837f0cdc7e0c084c8af47df4fa15536
-      internalID: -1619941984
+      spriteID: 0889dcb813413854dba6f8b6a1bce04d
+      internalID: 1313170650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OrkAttack_2
+      name: FarmerWalk_2
       rect:
         serializedVersion: 2
-        x: 176
+        x: 32
         y: 0
-        width: 88
-        height: 84
-      alignment: 6
+        width: 16
+        height: 30
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec41fba8739dbc54aa7a6b621cfa66e9
-      internalID: 777573242
+      spriteID: 330ebeca15e356947b453d20d0c58fa4
+      internalID: 2124418408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OrkAttack_3
+      name: FarmerWalk_3
       rect:
         serializedVersion: 2
-        x: 264
+        x: 48
         y: 0
-        width: 88
-        height: 84
-      alignment: 6
+        width: 16
+        height: 30
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f40902f1de61e094bb81ed55c54540eb
-      internalID: -2111836267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OrkAttack_4
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6273cd7f160eeb44f8b245ac3e3cb1a2
-      internalID: -123501249
+      spriteID: 95fd1bfd5b727ca47a8bbe1827049c52
+      internalID: -940803943
       vertices: []
       indices: 
       edges: []
@@ -220,11 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      OrkAttack_2: 777573242
-      OrkAttack_0: 503621175
-      OrkAttack_1: -1619941984
-      OrkAttack_3: -2111836267
-      OrkAttack_4: -123501249
+      FarmerWalk_1: 1313170650
+      FarmerWalk_2: 2124418408
+      FarmerWalk_3: -940803943
+      FarmerWalk_0: -1505259595
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

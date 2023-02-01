@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d4befe83c8deb704aaff7f480df991b4
+guid: 68159db00d41b6946a5af347beea5137
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,112 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: OrkAttack_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8baed8de567fab74dacd339839401442
-      internalID: 503621175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OrkAttack_1
-      rect:
-        serializedVersion: 2
-        x: 88
-        y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4837f0cdc7e0c084c8af47df4fa15536
-      internalID: -1619941984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OrkAttack_2
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec41fba8739dbc54aa7a6b621cfa66e9
-      internalID: 777573242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OrkAttack_3
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f40902f1de61e094bb81ed55c54540eb
-      internalID: -2111836267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OrkAttack_4
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6273cd7f160eeb44f8b245ac3e3cb1a2
-      internalID: -123501249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -219,12 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      OrkAttack_2: 777573242
-      OrkAttack_0: 503621175
-      OrkAttack_1: -1619941984
-      OrkAttack_3: -2111836267
-      OrkAttack_4: -123501249
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
