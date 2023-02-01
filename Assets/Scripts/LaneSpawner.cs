@@ -8,19 +8,31 @@ public class LaneSpawner : MonoBehaviour
 
 
     /// <summary>
-    /// allows you to disable a lane from spawning anything
+    /// if true, prevents a lane from spawning anything
     /// </summary>
     bool m_isActive;
     /// <summary>
-    /// defaults to 5 seconds
+    /// Interval between enemy spawns
     /// </summary>
-    public int m_spawnTimeInterval;
-    private float m_elapsedTime;
+
+    ///<summary>
+    ///how long to wait before spawning another enemy
+    ///</summary>
+    public float m_spawnTimeInterval;
+
+
+    private float m_elapsedTime;//time counter
+    /// <summary>
+    /// what enemy this lane is spawning
+    /// </summary>
     private GameObject m_enemyToSpawn;
+    
     void Start()
     {
-        m_isActive = false;
-        m_spawnTimeInterval = 5;
+        m_elapsedTime = 0;
+       
+        m_isActive = false;//all lanes start out deactivated and are randomly activated from WaveManager
+        m_spawnTimeInterval = 0.5f;//ill change this default value once i add random intervals in WaveManager
     }
 
     // Update is called once per frame
@@ -44,6 +56,7 @@ public class LaneSpawner : MonoBehaviour
     }
     public void SpawnEnemy()
     {
+        WaveManager.Instance.m_enemyCount++;//this is not great but it works and ill change it later
         GameObject enemy = Instantiate(m_enemyToSpawn, transform.position, UnityEngine.Quaternion.identity);
     }
     public void SetActive(bool active)
@@ -51,4 +64,5 @@ public class LaneSpawner : MonoBehaviour
         m_isActive = active;
 
     }
+    
 }
