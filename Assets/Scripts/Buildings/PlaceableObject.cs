@@ -12,7 +12,7 @@ public class PlaceableObject : MonoBehaviour {
 
     protected Health m_health;
 
-    private void Start() {
+    protected void Awake() {
         m_isPlaced = true;
         m_health = GetComponent<Health>();
         m_health.Initialize(Building.BuildingHealth);

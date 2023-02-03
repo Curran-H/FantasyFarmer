@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2393772353480009785}
   - component: {fileID: 1438397509927667936}
   - component: {fileID: 8307984416820862975}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Corn Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.027672857, y: -0.0021286905}

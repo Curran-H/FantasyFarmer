@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6599977352916179415}
   - component: {fileID: 6599977352916179413}
   - component: {fileID: 6599977352916179412}
-  m_Layer: 7
+  - component: {fileID: 4191039581127813210}
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6599977352916179414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4191039581127813210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6599977352916179414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783fba39a52083b4aa70271a87f7641d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_doUpdate: 1
+  m_percision: 100
 --- !u!1 &6599977353484280239
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +131,7 @@ GameObject:
   - component: {fileID: 6599977353484280226}
   - component: {fileID: 6599977353484280237}
   - component: {fileID: 6599977353484280236}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: AttackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4986,7 +5001,7 @@ GameObject:
   - component: {fileID: 6599977353661959098}
   - component: {fileID: 6599977353661959109}
   - component: {fileID: 7049349894263255725}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Enemy_Orc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5027,7 +5042,7 @@ MonoBehaviour:
   m_enemyState: 0
   m_canHit:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   m_particles: {fileID: 6599977353484280237}
 --- !u!114 &7049349894263255725
 MonoBehaviour:
@@ -5066,7 +5081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6599977354139423522}
   - component: {fileID: 4276823081704810798}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5098,10 +5113,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.064077616, y: -0.026698992}
+  m_Offset: {x: 0.1547609, y: -0.026699007}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5112,5 +5127,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5087388, y: 0.88964415}
+  m_Size: {x: 0.43014663, y: 0.88964415}
   m_EdgeRadius: 0
