@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class EnemyController : MonoBehaviour {
 
@@ -22,7 +23,11 @@ public class EnemyController : MonoBehaviour {
     private Vector3 m_hitPoint;
     private PlaceableObject m_target;
 
+    private SpriteRenderer m_spriteRenderer;
+    private bool m_isFading = false;
+
     private void Start() {
+        m_spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         m_animator = GetComponentInChildren<Animator>();
         m_nextAttackTime = Time.time + Enemy.EnemyAttackTimer;
         m_health = GetComponent<Health>();
@@ -57,6 +62,16 @@ public class EnemyController : MonoBehaviour {
     private void CheckForTower() {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, m_movementDirection, Enemy.EnemyAttackRange, m_canHit);
         if(hit) {
+            Debug.Log(hit.collider.name);
+            if(hit.collider.name == "Finish" && !m_isFading) {
+                Debug.Log("Fading...");
+                m_spriteRenderer.DOFade(0, 1f).SetEase(Ease.Linear).OnComplete(() => {
+                    ReachFinishLine();
+                });
+                m_isFading = true;
+                return;
+            }
+            
             PlaceableObject po = hit.collider.GetComponent<PlaceableObject>();
             if(po && m_enemyState != EnemyState.ATTACKING) {
                 m_hitPoint = hit.point;
@@ -69,6 +84,11 @@ public class EnemyController : MonoBehaviour {
         }
     }
 
+    private void ReachFinishLine() {
+        // Deal damage, do malicious things
+        ChangeState(EnemyState.DEAD);
+    }
+
     private void UpdateState() {
         switch(m_enemyState) {
             case EnemyState.MOVING:
@@ -77,6 +97,7 @@ public class EnemyController : MonoBehaviour {
             case EnemyState.ATTACKING:
                 Attack();
             break;
+
         }
     }
 
