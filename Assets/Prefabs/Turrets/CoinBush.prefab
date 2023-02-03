@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 5891833718028176373}
   - component: {fileID: 2338485129837905625}
   - component: {fileID: 8790902756088385192}
-  - component: {fileID: 6335472223552145567}
   - component: {fileID: 6298499974552947796}
   - component: {fileID: 7514234819936697077}
   - component: {fileID: -754865552437466287}
+  - component: {fileID: 6080909274968267160}
   m_Layer: 7
   m_Name: CoinBush
   m_TagString: Untagged
@@ -115,19 +115,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7919107, y: 0.8978479}
   m_EdgeRadius: 0
---- !u!114 &6335472223552145567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1444907403179782085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad7bc2873e75b424ca99299b96ac3052, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Building>k__BackingField: {fileID: 11400000, guid: 000fdb6465f78ab4d92f6a51d691a9e1, type: 2}
 --- !u!95 &6298499974552947796
 Animator:
   serializedVersion: 4
@@ -163,7 +150,7 @@ MonoBehaviour:
   OnDeathcallback:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6335472223552145567}
+      - m_Target: {fileID: 6080909274968267160}
         m_TargetAssemblyTypeName: PlaceableObject, Assembly-CSharp
         m_MethodName: OnDeath
         m_Mode: 1
@@ -189,3 +176,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_doUpdate: 0
   m_percision: 100
+--- !u!114 &6080909274968267160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444907403179782085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf787fc3ef4c78a49b10844bd69d7781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Building>k__BackingField: {fileID: 11400000, guid: 000fdb6465f78ab4d92f6a51d691a9e1, type: 2}
+  m_toGenerate: {fileID: 2385826706402065855, guid: bb157eec7c2cf6b48badc76c1a6a024e, type: 3}
+  m_timeBetweenGeneration: 2
+  m_amountToGenMin: 1
+  m_amountToGetMax: 2

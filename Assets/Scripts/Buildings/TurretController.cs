@@ -8,7 +8,7 @@ public class TurretController : PlaceableObject {
     private Weapon m_weapon;
     private List<EnemyController> m_targets;
 
-    private void Awake() {
+    private void Start() {
         m_targetSeeker = GetComponent<TargetSeeker>();
         m_weapon = GetComponent<Weapon>();
         m_targets = new List<EnemyController>();
