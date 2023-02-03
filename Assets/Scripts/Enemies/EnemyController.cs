@@ -62,9 +62,7 @@ public class EnemyController : MonoBehaviour {
     private void CheckForTower() {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, m_movementDirection, Enemy.EnemyAttackRange, m_canHit);
         if(hit) {
-            Debug.Log(hit.collider.name);
             if(hit.collider.name == "Finish" && !m_isFading) {
-                Debug.Log("Fading...");
                 m_spriteRenderer.DOFade(0, 1f).SetEase(Ease.Linear).OnComplete(() => {
                     ReachFinishLine();
                 });

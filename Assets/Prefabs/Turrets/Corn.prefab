@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 510006540892627692}
   - component: {fileID: -837963832085652447}
   - component: {fileID: 1939027083741188948}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Corn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.4896388, y: 0.49643922}
@@ -148,6 +148,9 @@ MonoBehaviour:
   <RequiresTargetsToFire>k__BackingField: 1
   m_originOffset: {x: 0.5, y: 0.5, z: 0}
   m_toSpawn: {fileID: 2393772353480009785, guid: 89420c9a61db091478834e10d24258f7, type: 3}
+  m_canHit:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &510006540892627692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +170,7 @@ MonoBehaviour:
   - {x: 1, y: 0}
   m_canHit:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 256
 --- !u!114 &-837963832085652447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,3 +211,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_doUpdate: 0
+  m_percision: 100

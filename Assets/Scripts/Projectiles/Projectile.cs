@@ -8,14 +8,16 @@ public class Projectile : MonoBehaviour {
     private Vector2 m_direction;
     private float m_maxLifetime = 3f;
     private int m_damage;
+    private LayerMask m_canHit;
 
-    public void Initialize(Vector2 direction, float speed, int damage) {
+    public void Initialize(Vector2 direction, float speed, int damage, LayerMask canHit) {
         m_projectileSpeed = speed;
         m_direction = direction;
         m_damage = damage;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         m_maxLifetime += Time.time;
+        m_canHit = canHit;
     }
 
     public void Update() {
@@ -25,12 +27,12 @@ public class Projectile : MonoBehaviour {
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collisionInfo) {
-        EnemyController e = collisionInfo.collider.GetComponentInParent<EnemyController>();
+    public void OnTriggerEnter2D(Collider2D collider) {
+        EnemyController e = collider.GetComponentInParent<EnemyController>();
         if(e) {
             e.TakeDamage(m_damage);
+            OnDeath();
         } 
-        OnDeath();
     } 
 
     // If we run into performance issues we should look into object pooling

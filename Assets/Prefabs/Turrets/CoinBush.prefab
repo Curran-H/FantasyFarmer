@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6298499974552947796}
   - component: {fileID: 7514234819936697077}
   - component: {fileID: -754865552437466287}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CoinBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,3 +188,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_doUpdate: 0
+  m_percision: 100
