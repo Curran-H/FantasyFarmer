@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 
@@ -11,10 +12,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject[] slots;
     [SerializeField] private GameObject Selector;
     [SerializeField] private GameObject Settings;
-    [SerializeField] private TMP_Text m_goldText; 
+    [SerializeField] private TMP_Text m_goldText;
+    [SerializeField] private Slider m_healthbar;
+    [SerializeField] private GameObject m_endGamePanel;
+
     private int index = 0;
     private bool gamePaused;
-
+    private bool gameEnded;
 
     private void Awake()
     {
@@ -24,18 +28,28 @@ public class UIManager : MonoBehaviour
         }
         Selector.transform.position = slots[0].transform.position;
         gamePaused = false;
+        m_endGamePanel.SetActive(false);
     }
 
     private void Start() {
         UpdateSlotCosts();
     }
 
-    private void InitializeSlotCosts() {
-    
+    public void UpdateHealthbar(int amt) {
+        m_healthbar.value = amt;
     }
 
     private void Update()
     {
+        if(gameEnded) {
+            m_endGamePanel.SetActive(true);
+            if(Input.anyKeyDown) {
+                SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
+            }
+
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Tab)) {
             if (gamePaused) {
                 Settings.SetActive(false);
@@ -64,6 +78,10 @@ public class UIManager : MonoBehaviour
             BuildingManager.Instance.setBuilding(i);
             slots[i].transform.GetChild(0).GetComponent<TMP_Text>().text = BuildingManager.Instance.getBuilding().BuildingCost.ToString();
         }
+    }
+
+    public void EndGameScreen() {
+        gameEnded = true;
     }
 
     public void changeSelected(bool direction)

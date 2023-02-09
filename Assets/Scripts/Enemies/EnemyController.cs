@@ -67,6 +67,8 @@ public class EnemyController : MonoBehaviour {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, m_movementDirection, Enemy.EnemyAttackRange, m_canHit);
         if(hit) {
             if(hit.collider.name == "Finish" && !m_isFading) {
+                Finish finish = hit.collider.GetComponent<Finish>();
+                finish.UpdateHealth(-Enemy.EnemyHealth);
                 m_spriteRenderer.DOFade(0, 1f).SetEase(Ease.Linear).OnComplete(() => {
                     ReachFinishLine();
                 });

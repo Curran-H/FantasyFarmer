@@ -145,9 +145,13 @@ MonoBehaviour:
   m_fireMode: 1
   m_directions:
   - {x: 1, y: 0}
-  - {x: -1, y: 0}
+  - {x: -1, y: -1}
   - {x: 0, y: 1}
+  - {x: -1, y: 0}
+  - {x: 1, y: -1}
   - {x: 0, y: -1}
+  - {x: -1, y: 1}
+  - {x: 1, y: 1}
   <RequiresTargetsToFire>k__BackingField: 1
   m_originOffset: {x: 0.5, y: 0.5, z: 0}
   m_toSpawn: {fileID: 2393772353480009785, guid: 89420c9a61db091478834e10d24258f7, type: 3}
