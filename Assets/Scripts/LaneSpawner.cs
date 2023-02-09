@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 
-public class LaneSpawner : MonoBehaviour
-{
-
-
+public class LaneSpawner : MonoBehaviour {
     /// <summary>
     /// if true, prevents a lane from spawning anything
     /// </summary>
@@ -36,13 +33,11 @@ public class LaneSpawner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
+    void Update() {
         if (m_isActive)//if lane is not active
         {
             m_elapsedTime += Time.deltaTime;
-            if (m_elapsedTime > m_spawnTimeInterval)
+            if (m_elapsedTime >= m_spawnTimeInterval)
             {
                 SpawnEnemy();
                 m_elapsedTime = 0;
@@ -62,7 +57,5 @@ public class LaneSpawner : MonoBehaviour
     public void SetActive(bool active)
     {
         m_isActive = active;
-
     }
-    
 }

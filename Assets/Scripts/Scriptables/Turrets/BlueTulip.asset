@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4020bab0355ee9439157940fdd370b8, type: 3}
+  m_Name: BlueTulip
+  m_EditorClassIdentifier: 
+  BuildingSprite: {fileID: 1276418615, guid: 5ffd57a46f3a36e478176ac6540f4b9d, type: 3}
+  BuildingName: Blue Tulip
+  BuildingWidth: 1
+  BuildingHeight: 1
+  BuildingCost: 30
+  BuildingHealth: 5
+  BuildingPrefab: {fileID: 3208072854062642851, guid: 55043363af1134b4dbb4e307451825af, type: 3}

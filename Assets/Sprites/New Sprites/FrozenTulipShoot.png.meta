@@ -101,17 +101,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OrkAttack_0
+      name: FrozenTulipShoot_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 88
-        height: 84
+        width: 19
+        height: 19
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8baed8de567fab74dacd339839401442
-      internalID: 503621175
+      spriteID: 3d21d9d2a30767b40a63be25245a522a
+      internalID: 1276418615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OrkAttack_1
+      name: FrozenTulipShoot_1
       rect:
         serializedVersion: 2
-        x: 88
+        x: 19
         y: 0
-        width: 88
-        height: 84
+        width: 19
+        height: 19
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4837f0cdc7e0c084c8af47df4fa15536
-      internalID: -1619941984
+      spriteID: baa8ed9f096e24842a719a54a4546189
+      internalID: -932050025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OrkAttack_2
+      name: FrozenTulipShoot_2
       rect:
         serializedVersion: 2
-        x: 176
+        x: 38
         y: 0
-        width: 88
-        height: 84
+        width: 19
+        height: 19
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec41fba8739dbc54aa7a6b621cfa66e9
-      internalID: 777573242
+      spriteID: bc71aa07309510d4bb03f25556eff2e6
+      internalID: -2063728546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OrkAttack_3
+      name: FrozenTulipShoot_3
       rect:
         serializedVersion: 2
-        x: 264
+        x: 57
         y: 0
-        width: 88
-        height: 84
+        width: 19
+        height: 19
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,29 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f40902f1de61e094bb81ed55c54540eb
-      internalID: -2111836267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OrkAttack_4
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6273cd7f160eeb44f8b245ac3e3cb1a2
-      internalID: -123501249
+      spriteID: 6179569d20a0c7946846b89312fc77dd
+      internalID: -1074271293
       vertices: []
       indices: 
       edges: []
@@ -220,11 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      OrkAttack_2: 777573242
-      OrkAttack_0: 503621175
-      OrkAttack_1: -1619941984
-      OrkAttack_3: -2111836267
-      OrkAttack_4: -123501249
+      FrozenTulipShoot_0: 1276418615
+      FrozenTulipShoot_1: -932050025
+      FrozenTulipShoot_2: -2063728546
+      FrozenTulipShoot_3: -1074271293
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -26,18 +26,18 @@ public class MapManager : MonoBehaviour {
         m_placedObjects = new Dictionary<Vector3Int, PlaceableObject>();
     }
 
-    public void StartPlacing(Vector3 position, Building building) {
+    public void StartPlacing(Vector3 playerPos, Vector3 position, Building building) {
         Cursor.visible = false;
         m_placementGhost.sprite = building.BuildingSprite;
         m_placementGhost.color = Color.white;
         m_placementGhost.enabled = true;
     }
 
-    public void Placing(Vector3 position, Building building) {
+    public void Placing(Vector3 playerPos, Vector3 position, Building building) {
         m_placementGhost.sprite = building.BuildingSprite;
         Vector3Int cellPos = WorldToCell(position);
         m_placementGhost.transform.position = cellPos; 
-        bool isValid = IsValidPlacement(position, building);
+        bool isValid = IsValidPlacement(playerPos, position, building);
         if(isValid) {
             m_placementGhost.color = Color.white;
         } else if(!isValid) {
@@ -45,7 +45,7 @@ public class MapManager : MonoBehaviour {
         }
     }
 
-    public void EndPlacing(Vector3 position, Building building) {
+    public void EndPlacing(Vector3 playerPos, Vector3 position, Building building) {
         PlaceObject(position, building.BuildingPrefab);
         CancelPlacing();
     }
@@ -103,7 +103,13 @@ public class MapManager : MonoBehaviour {
     /// <summary>
     /// Checks to see if the entire object is placeable
     /// </summary>
-    public bool IsValidPlacement(Vector3 position, Building toPlace) {
+    public bool IsValidPlacement(Vector3 playerPos, Vector3 position, Building toPlace) {
+        if(PlayerController.Instance.Gold < toPlace.BuildingCost)
+            return false;
+            
+        if(Vector3.Distance(playerPos, position) >= 4) 
+            return false;
+
         Collider2D overlap = Physics2D.OverlapBox(position, new Vector2(toPlace.BuildingWidth, toPlace.BuildingHeight), 0, m_cantPlace);
         if(overlap != null)
             return false;

@@ -12,6 +12,8 @@ public class EnemyController : MonoBehaviour {
 
     // private int m_enemyHealth;
     private Health m_health;
+    private float m_speed;
+    private float m_attackDamage;
 
     private Vector3 m_movementDirection = new Vector3(-1, 0, 0);
     private float m_nextAttackTime;
@@ -31,14 +33,28 @@ public class EnemyController : MonoBehaviour {
         m_animator = GetComponentInChildren<Animator>();
         m_nextAttackTime = Time.time + Enemy.EnemyAttackTimer;
         m_health = GetComponent<Health>();
-        m_health.Initialize(Enemy.EnemyHealth);
+        m_health.Initialize(Mathf.RoundToInt(Enemy.EnemyHealth*WaveManager.Instance.GlobalEnemyHealthModifier));
+        m_speed = Enemy.EnemySpeed * WaveManager.Instance.GlobalEnemySpeedModifier;
+        m_attackDamage = Enemy.EnemyAttackDamage * WaveManager.Instance.GlobalEnemyAttackModifier;
     }
 
     private void Update() {
+        if(Time.time >= m_slowClearTime) {
+            m_slow = 1f;
+        }
+
         if(m_enemyState != EnemyState.DEAD) {
             CheckForTower();
             UpdateState();
         }
+    }
+
+    private float m_slow = 1f;
+    private float m_slowClearTime;
+
+    public void ApplySlow(float amount, float duration) {
+        m_slow = amount;
+        m_slowClearTime = Time.time + duration;
     }
 
     public void TakeDamage(int amount) {
@@ -46,7 +62,7 @@ public class EnemyController : MonoBehaviour {
     }
 
     private void Move() {
-        transform.position += m_movementDirection * Enemy.EnemySpeed * Time.deltaTime;
+        transform.position += m_movementDirection * (m_speed * m_slow) * Time.deltaTime;
     }
 
     private void Attack() {
@@ -54,7 +70,7 @@ public class EnemyController : MonoBehaviour {
             m_particles.transform.position = m_hitPoint;
             m_particles.Emit(Random.Range(3, 7));
 
-            m_target.TakeDamage(Enemy.EnemyAttackDamage);
+            m_target.TakeDamage(Mathf.RoundToInt(m_attackDamage));
             m_nextAttackTime = Time.time + Enemy.EnemyAttackTimer;
         }
     }
@@ -63,6 +79,8 @@ public class EnemyController : MonoBehaviour {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, m_movementDirection, Enemy.EnemyAttackRange, m_canHit);
         if(hit) {
             if(hit.collider.name == "Finish" && !m_isFading) {
+                Finish finish = hit.collider.GetComponent<Finish>();
+                finish.UpdateHealth(-m_health.CurrentHealth);
                 m_spriteRenderer.DOFade(0, 1f).SetEase(Ease.Linear).OnComplete(() => {
                     ReachFinishLine();
                 });
@@ -83,7 +101,6 @@ public class EnemyController : MonoBehaviour {
     }
 
     private void ReachFinishLine() {
-        // Deal damage, do malicious things
         ChangeState(EnemyState.DEAD);
     }
 
@@ -118,6 +135,7 @@ public class EnemyController : MonoBehaviour {
     }
 
     public void OnDeath() {
+        WaveManager.Instance.EnemyKilled();
         ChangeState(EnemyState.DEAD);
     }
 }

@@ -15,7 +15,9 @@ public class PlaceableObject : MonoBehaviour {
     protected void Awake() {
         m_isPlaced = true;
         m_health = GetComponent<Health>();
-        m_health.Initialize(Building.BuildingHealth);
+        if(m_health && Building) {
+            m_health.Initialize(Building.BuildingHealth);
+        }
     }
 
     public virtual void OnPlace(Vector3Int[] positions) {

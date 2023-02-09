@@ -63,11 +63,22 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     [SerializeField] private float m_changingSpawnTime;
 
-    [SerializeField]private float elapsedChangingSpawnTime;
+    [SerializeField] private float elapsedChangingSpawnTime;
+
+    [SerializeField] private float m_startDelay = 5f;
 
     public List<GameObject> m_enemies = new List<GameObject>();//fill the list with different enemies and use their index to set what lanes spawn what specific enemy
 
     [SerializeField] private LaneSpawner[] m_laneSpawners;
+
+    public float GlobalEnemySpeedModifier = 1;
+    public float GlobalEnemyHealthModifier = 1;
+    public float GlobalEnemyAttackModifier = 1;
+
+    private int m_enemiesKilled;
+    public int EnemiesKilled { get { return m_enemiesKilled; } }
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -81,78 +92,75 @@ public class WaveManager : MonoBehaviour
         m_elapsedTime = 0;
         m_laneSpawners = new LaneSpawner[transform.childCount];//the lanes are children of wavemanager so create an array that can fit all of them
         InitialiseLaneSpawners();
-    }
-    private void Update()
-    {
-        waveOne();
-        
-
-
+        Invoke("StartingLanes", m_startDelay);
     }
 
-   void waveOne()
-    {
+    private void StartingLanes() {
+        SelectRandomActiveLanes();
+        SetSpawnIntervals();
+        ActivateLanes();
+    }
 
+    public void EnemyKilled() {
+        m_enemiesKilled++;
+        GlobalEnemyHealthModifier += m_enemiesKilled * 0.0005f;
+        GlobalEnemyAttackModifier += m_enemiesKilled * 0.0005f;
+        GlobalEnemySpeedModifier += m_enemiesKilled * 0.0005f;
+        m_maxPossibleActiveLanes += Mathf.RoundToInt(m_enemiesKilled * 0.0005f);
+        m_maxSpawnInterval -= Mathf.RoundToInt(m_enemiesKilled * 0.0005f);
+        laneSwapInterval -= Mathf.RoundToInt(m_enemiesKilled * 0.0005f);
+    }
+
+    private void Update() {
+        ManipulateLanes();
+    }
+
+   private void ManipulateLanes() {
         elapsedChangingSpawnTime += Time.deltaTime;
         m_elapsedTime += Time.deltaTime;
 
-        if (elapsedChangingSpawnTime > m_changingSpawnTime)
-        {
+        if (elapsedChangingSpawnTime >= m_changingSpawnTime) {
             SetSpawnIntervals();
             elapsedChangingSpawnTime = 0;
-
         }
 
-        
-        
-        if (m_elapsedTime > laneSwapInterval)
-        {
-
+        if (m_elapsedTime >= laneSwapInterval) {
             SelectRandomActiveLanes();
             ActivateLanes();
-            
-
+        
             m_elapsedTime = 0;
         }
     }
-    void waveTwo()
-    {
-        //change settings for wave 2 here, e.g more active lanes at once or a shorter interval
-        m_waveNumber = 2;
-        m_maxSpawnInterval = 10;
-        m_elapsedTime += Time.deltaTime;
-        if (m_elapsedTime > laneSwapInterval)
-        {
+    // void waveTwo()
+    // {
+    //     //change settings for wave 2 here, e.g more active lanes at once or a shorter interval
+    //     m_waveNumber = 2;
+    //     m_maxSpawnInterval = 10;
+    //     m_elapsedTime += Time.deltaTime;
+    //     if (m_elapsedTime > laneSwapInterval)
+    //     {
 
-            SelectRandomActiveLanes();
-            ActivateLanes();
+    //         SelectRandomActiveLanes();
+    //         ActivateLanes();
 
-            m_elapsedTime = 0;
-        }
-    }
-    void waveThree()
-    {
-        //change settings for wave 3 here, e.g more active lanes at once or a shorter interval
+    //         m_elapsedTime = 0;
+    //     }
+    // }
+    // void waveThree()
+    // {
+    //     //change settings for wave 3 here, e.g more active lanes at once or a shorter interval
         
-        m_waveNumber++;
-        m_elapsedTime += Time.deltaTime;
-        if (m_elapsedTime > laneSwapInterval)
-        {
+    //     m_waveNumber++;
+    //     m_elapsedTime += Time.deltaTime;
+    //     if (m_elapsedTime > laneSwapInterval)
+    //     {
 
-            SelectRandomActiveLanes();
-            ActivateLanes();
+    //         SelectRandomActiveLanes();
+    //         ActivateLanes();
 
-            m_elapsedTime = 0;
-        }
-    }
-
-
-
-
-
-
-
-
+    //         m_elapsedTime = 0;
+    //     }
+    // }
 
     /// <summary>
     /// Generates indexes of lanes to be activated
@@ -181,6 +189,9 @@ public class WaveManager : MonoBehaviour
         //now activate the new active lanes
         for (int i = 0; i < m_activeLaneIndexes.Count; i++)
         {
+            // m_laneSpawners[m_activeLaneIndexes[i]].SetEnemyToSpawn();
+            int enemyIndex = UnityEngine.Random.Range(0, m_enemies.Count);
+            m_laneSpawners[m_activeLaneIndexes[i]].SetEnemyToSpawn(m_enemies[enemyIndex]);
             m_laneSpawners[m_activeLaneIndexes[i]].SetActive(true);
         }
     }
@@ -190,7 +201,6 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     void InitialiseLaneSpawners()
     {
-
        m_laneSpawners = GetComponentsInChildren<LaneSpawner>();
        foreach(LaneSpawner ls in m_laneSpawners)
         {
@@ -202,6 +212,8 @@ public class WaveManager : MonoBehaviour
     {
         for(int i = 0; i < m_activeLaneIndexes.Count; i++)
         {
+            int enemyIndex = UnityEngine.Random.Range(0, m_enemies.Count);
+            m_laneSpawners[m_activeLaneIndexes[i]].SetEnemyToSpawn(m_enemies[enemyIndex]);
             m_laneSpawners[m_activeLaneIndexes[i]].m_spawnTimeInterval = UnityEngine.Random.Range(m_minSpawnInterval, m_maxSpawnInterval);
         }
     }

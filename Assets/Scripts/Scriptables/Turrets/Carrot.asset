@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4020bab0355ee9439157940fdd370b8, type: 3}
+  m_Name: Carrot
+  m_EditorClassIdentifier: 
+  BuildingSprite: {fileID: 21300000, guid: 7fff410dddeb7a44a811215bc29628a8, type: 3}
+  BuildingName: Carrot
+  BuildingWidth: 1
+  BuildingHeight: 1
+  BuildingCost: 30
+  BuildingHealth: 10
+  BuildingPrefab: {fileID: 3863718379072604273, guid: 9711825a17a53a64f9c84b39a715b8d2, type: 3}

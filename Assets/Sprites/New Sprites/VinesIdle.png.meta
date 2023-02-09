@@ -101,17 +101,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OrkAttack_0
+      name: VinesIdle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 88
-        height: 84
+        width: 17
+        height: 17
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8baed8de567fab74dacd339839401442
-      internalID: 503621175
+      spriteID: 37e34b31d5ac343489905a048ae23c29
+      internalID: -987203846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OrkAttack_1
+      name: VinesIdle_1
       rect:
         serializedVersion: 2
-        x: 88
+        x: 17
         y: 0
-        width: 88
-        height: 84
+        width: 17
+        height: 17
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4837f0cdc7e0c084c8af47df4fa15536
-      internalID: -1619941984
+      spriteID: bd52a23723477fe4dbc7a5a1f54e3208
+      internalID: -811954629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OrkAttack_2
+      name: VinesIdle_2
       rect:
         serializedVersion: 2
-        x: 176
+        x: 34
         y: 0
-        width: 88
-        height: 84
+        width: 17
+        height: 17
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec41fba8739dbc54aa7a6b621cfa66e9
-      internalID: 777573242
+      spriteID: 1b4ca2cdc839494438e934e2a3e5ddec
+      internalID: 3720732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OrkAttack_3
+      name: VinesIdle_3
       rect:
         serializedVersion: 2
-        x: 264
+        x: 51
         y: 0
-        width: 88
-        height: 84
+        width: 17
+        height: 17
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,29 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f40902f1de61e094bb81ed55c54540eb
-      internalID: -2111836267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OrkAttack_4
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6273cd7f160eeb44f8b245ac3e3cb1a2
-      internalID: -123501249
+      spriteID: 17e64939573c3ea4fa3b5b92e8b02265
+      internalID: -318551211
       vertices: []
       indices: 
       edges: []
@@ -220,11 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      OrkAttack_2: 777573242
-      OrkAttack_0: 503621175
-      OrkAttack_1: -1619941984
-      OrkAttack_3: -2111836267
-      OrkAttack_4: -123501249
+      VinesIdle_3: -318551211
+      VinesIdle_0: -987203846
+      VinesIdle_1: -811954629
+      VinesIdle_2: 3720732
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
