@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4feada482776048a4fe506a7ef80d7, type: 3}
   m_Name: Slime
   m_EditorClassIdentifier: 
-  EnemyName: Skeleton
-  EnemyHealth: 12
-  EnemySpeed: 6
-  EnemyAttackTimer: 4
-  EnemyAttackRange: 0.1
-  EnemyAttackDamage: 2
+  EnemyName: Slime
+  EnemyHealth: 10
+  EnemySpeed: 3
+  EnemyAttackTimer: 2
+  EnemyAttackRange: 0.15
+  EnemyAttackDamage: 1

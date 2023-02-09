@@ -5001,6 +5001,7 @@ GameObject:
   - component: {fileID: 6599977353661959098}
   - component: {fileID: 6599977353661959109}
   - component: {fileID: 7049349894263255725}
+  - component: {fileID: -4627232273551553981}
   m_Layer: 8
   m_Name: Enemy_Orc
   m_TagString: Untagged
@@ -5059,6 +5060,18 @@ MonoBehaviour:
   OnDeathcallback:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: -4627232273551553981}
+        m_TargetAssemblyTypeName: CoinBush, Assembly-CSharp
+        m_MethodName: Generate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6599977353661959109}
         m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
         m_MethodName: OnDeath
@@ -5071,6 +5084,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-4627232273551553981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6599977353661959108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf787fc3ef4c78a49b10844bd69d7781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Building>k__BackingField: {fileID: 0}
+  m_toGenerate: {fileID: 2385826706402065855, guid: bb157eec7c2cf6b48badc76c1a6a024e, type: 3}
+  m_timeBetweenGeneration: 0
+  m_amountToGenMin: 1
+  m_amountToGetMax: 2
+  m_active: 0
 --- !u!1 &6599977354139423533
 GameObject:
   m_ObjectHideFlags: 0

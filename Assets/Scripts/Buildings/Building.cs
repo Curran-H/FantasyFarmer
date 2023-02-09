@@ -11,6 +11,7 @@ public class Building : ScriptableObject {
     public int BuildingWidth;
     public int BuildingHeight;
     
+    public int BuildingCost;
     public int BuildingHealth;
     
     public PlaceableObject BuildingPrefab;

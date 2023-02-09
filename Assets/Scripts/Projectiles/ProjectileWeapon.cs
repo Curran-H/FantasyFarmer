@@ -8,6 +8,8 @@ public class ProjectileWeapon : Weapon {
     [SerializeField] private Vector3 m_originOffset = new Vector3(0.5f, 0.5f);
     [SerializeField] private Projectile m_toSpawn;
     [SerializeField] private LayerMask m_canHit;
+    [SerializeField] private int m_damage;
+    [SerializeField] private int m_speed;
 
     protected override void FiremodeFire() {
         switch(m_fireMode) {
@@ -26,6 +28,6 @@ public class ProjectileWeapon : Weapon {
     /// <summary> Creates and initializes a projectile </summary>
     private void CreateAndInitializeProjectile(Vector2 direction) {
         Projectile p = Instantiate(m_toSpawn, transform.position + m_originOffset, Quaternion.identity);
-        p.Initialize(direction, 10, 1, m_canHit);
+        p.Initialize(direction, m_speed, m_damage, m_canHit);
     }
 }

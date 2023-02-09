@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4627232273551553981, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: m_amountToGenMin
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4627232273551553981, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: m_amountToGetMax
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4276823081704810798, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
       propertyPath: m_Size.x
       value: 0.56104857
@@ -99,5 +107,60 @@ PrefabInstance:
       propertyPath: <Enemy>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: b79a0bf2e2effde4b8ca24b864d1e9fb, type: 2}
+    - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6452615510333274254}
+    - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Generate
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CoinBush, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: EnemyController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+--- !u!114 &6452615510333274254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6599977353661959109, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+  m_PrefabInstance: {fileID: 151890873627702091}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b5f4e1d0569884ba811701d3ad4260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -68,6 +68,11 @@ public class WaveManager : MonoBehaviour
     public List<GameObject> m_enemies = new List<GameObject>();//fill the list with different enemies and use their index to set what lanes spawn what specific enemy
 
     [SerializeField] private LaneSpawner[] m_laneSpawners;
+
+    public float GlobalEnemySpeedModifier = 1;
+    public float GlobalEnemyHealthModifier = 1;
+    public float GlobalEnemyAttackModifier = 1;
+
     private void Awake()
     {
         if (Instance == null)

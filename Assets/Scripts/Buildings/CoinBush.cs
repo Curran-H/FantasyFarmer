@@ -8,6 +8,7 @@ public class CoinBush : TurretController {
     [SerializeField] private float m_timeBetweenGeneration = 2; 
     [SerializeField] private int m_amountToGenMin = 1;
     [SerializeField] private int m_amountToGetMax = 2;
+    [SerializeField] private bool m_active = true;
 
     private float m_nextGenerationTime;
 
@@ -16,12 +17,14 @@ public class CoinBush : TurretController {
     }
 
     private void Update() {
+        if(!m_active) return;
+
         if(Time.time >= m_nextGenerationTime) {
             Generate();
         }
     }
 
-    private void Generate() {
+    public void Generate() {
         int amountToGen = Random.Range(m_amountToGenMin, m_amountToGetMax+1);
         
         for(int i=0; i<amountToGen; i++) {

@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour {
 
     private float m_projectileSpeed;
     private Vector2 m_direction;
-    private float m_maxLifetime = 3f;
+    private float m_maxLifetime = 5f;
     private int m_damage;
     private LayerMask m_canHit;
 
