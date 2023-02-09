@@ -181,6 +181,9 @@ public class WaveManager : MonoBehaviour
         //now activate the new active lanes
         for (int i = 0; i < m_activeLaneIndexes.Count; i++)
         {
+            // m_laneSpawners[m_activeLaneIndexes[i]].SetEnemyToSpawn();
+            int enemyIndex = UnityEngine.Random.Range(0, m_enemies.Count);
+            m_laneSpawners[m_activeLaneIndexes[i]].SetEnemyToSpawn(m_enemies[enemyIndex]);
             m_laneSpawners[m_activeLaneIndexes[i]].SetActive(true);
         }
     }
@@ -190,7 +193,6 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     void InitialiseLaneSpawners()
     {
-
        m_laneSpawners = GetComponentsInChildren<LaneSpawner>();
        foreach(LaneSpawner ls in m_laneSpawners)
         {

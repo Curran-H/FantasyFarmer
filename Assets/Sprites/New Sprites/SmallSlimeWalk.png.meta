@@ -101,110 +101,101 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OrkAttack_0
+      name: SmallSlimeWalk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        width: 16
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8baed8de567fab74dacd339839401442
-      internalID: 503621175
+      spriteID: db958f81e071a5242b049e62f4eec6ef
+      internalID: -620487542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OrkAttack_1
+      name: SmallSlimeWalk_1
       rect:
         serializedVersion: 2
-        x: 88
+        x: 16
         y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        width: 16
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4837f0cdc7e0c084c8af47df4fa15536
-      internalID: -1619941984
+      spriteID: a785cab78c599bb4183e9f82eba28a4c
+      internalID: 768058793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OrkAttack_2
+      name: SmallSlimeWalk_2
       rect:
         serializedVersion: 2
-        x: 176
+        x: 32
         y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        width: 16
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec41fba8739dbc54aa7a6b621cfa66e9
-      internalID: 777573242
+      spriteID: 6068d09c6510fdd468c136de5fbac3e6
+      internalID: 79270483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OrkAttack_3
+      name: SmallSlimeWalk_3
       rect:
         serializedVersion: 2
-        x: 264
+        x: 48
         y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        width: 16
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f40902f1de61e094bb81ed55c54540eb
-      internalID: -2111836267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OrkAttack_4
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 0
-        width: 88
-        height: 84
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6273cd7f160eeb44f8b245ac3e3cb1a2
-      internalID: -123501249
+      spriteID: 75e64ceeb65db874093c17317093861d
+      internalID: -806467113
       vertices: []
       indices: 
       edges: []
@@ -220,11 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      OrkAttack_2: 777573242
-      OrkAttack_0: 503621175
-      OrkAttack_1: -1619941984
-      OrkAttack_3: -2111836267
-      OrkAttack_4: -123501249
+      SmallSlimeWalk_1: 768058793
+      SmallSlimeWalk_0: -620487542
+      SmallSlimeWalk_2: 79270483
+      SmallSlimeWalk_3: -806467113
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

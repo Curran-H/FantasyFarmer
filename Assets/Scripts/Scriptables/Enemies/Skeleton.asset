@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f4feada482776048a4fe506a7ef80d7, type: 3}
-  m_Name: Orc
+  m_Name: Skeleton
   m_EditorClassIdentifier: 
-  EnemyName: Orc
-  EnemyHealth: 4
-  EnemySpeed: 2
-  EnemyAttackTimer: 3
-  EnemyAttackRange: 0.5
-  EnemyAttackDamage: 1
+  EnemyName: Skeleton
+  EnemyHealth: 12
+  EnemySpeed: 6
+  EnemyAttackTimer: 4
+  EnemyAttackRange: 0.1
+  EnemyAttackDamage: 2
