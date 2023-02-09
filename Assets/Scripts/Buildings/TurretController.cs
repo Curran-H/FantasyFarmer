@@ -8,6 +8,11 @@ public class TurretController : PlaceableObject {
     private Weapon m_weapon;
     private List<EnemyController> m_targets;
 
+    [SerializeField] private bool m_buffNearbyTurretAttackSpeed;
+    [SerializeField] private float m_attackSpeedBuffAmount = 0.1f;
+    [SerializeField] private float m_buffRadius = 5f;
+    [SerializeField] private LayerMask m_canBuff;
+
     private void Start() {
         m_targetSeeker = GetComponent<TargetSeeker>();
         m_weapon = GetComponent<Weapon>();

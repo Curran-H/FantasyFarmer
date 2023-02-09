@@ -7,6 +7,7 @@ public abstract class Weapon : MonoBehaviour {
     
     [SerializeField] protected float m_weaponCooldown;
     protected float m_currentWeaponCooldown;
+    public float CurrentWeaponCoolDown { get { return m_currentWeaponCooldown; } set { m_currentWeaponCooldown = value; }}
 
     ///<summary> How the weapon will fire. This may be obsolete for some towers (AOE) </summary>
     [SerializeField] protected FireMode m_fireMode;

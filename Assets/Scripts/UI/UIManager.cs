@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     private int index = 0;
     private bool gamePaused;
     private bool gameEnded;
+    private bool canContinue;
 
     private void Awake()
     {
@@ -39,11 +40,15 @@ public class UIManager : MonoBehaviour
         m_healthbar.value = amt;
     }
 
+    private void CanContinue() {
+        canContinue = true;
+    }
+
     private void Update()
     {
         if(gameEnded) {
             m_endGamePanel.SetActive(true);
-            if(Input.anyKeyDown) {
+            if(Input.anyKeyDown && canContinue) {
                 SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
             }
 
@@ -82,6 +87,7 @@ public class UIManager : MonoBehaviour
 
     public void EndGameScreen() {
         gameEnded = true;
+        Invoke("CanContinue", 2);
     }
 
     public void changeSelected(bool direction)

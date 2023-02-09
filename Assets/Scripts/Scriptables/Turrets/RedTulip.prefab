@@ -141,16 +141,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f87a5da37fdceb4681973e73fe926c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_weaponCooldown: 1.5
-  m_fireMode: 1
+  m_weaponCooldown: 6
+  m_fireMode: 0
   m_directions:
-  - {x: 1, y: 0}
-  <RequiresTargetsToFire>k__BackingField: 1
+  - {x: 1, y: 1}
+  - {x: -1, y: 1}
+  - {x: -1, y: -1}
+  - {x: 1, y: -1}
+  <RequiresTargetsToFire>k__BackingField: 0
   m_originOffset: {x: 0.5, y: 0.5, z: 0}
   m_toSpawn: {fileID: 5741993717431331802, guid: b4f1a4a1df6c1a54e8b935b7cbdecb78, type: 3}
   m_canHit:
     serializedVersion: 2
     m_Bits: 256
+  m_damage: 6
+  m_speed: 6
 --- !u!114 &4249618465726893495
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,6 +16,6 @@ MonoBehaviour:
   BuildingName: Blue Tulip
   BuildingWidth: 1
   BuildingHeight: 1
-  BuildingCost: 20
+  BuildingCost: 30
   BuildingHealth: 5
   BuildingPrefab: {fileID: 3208072854062642851, guid: 55043363af1134b4dbb4e307451825af, type: 3}

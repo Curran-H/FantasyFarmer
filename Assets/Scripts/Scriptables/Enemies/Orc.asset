@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyName: Orc
   EnemyHealth: 4
-  EnemySpeed: 2
+  EnemySpeed: 4
   EnemyAttackTimer: 3
   EnemyAttackRange: 0.5
-  EnemyAttackDamage: 1
+  EnemyAttackDamage: 2

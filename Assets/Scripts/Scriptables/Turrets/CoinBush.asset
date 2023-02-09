@@ -16,6 +16,6 @@ MonoBehaviour:
   BuildingName: CoinBush
   BuildingWidth: 1
   BuildingHeight: 1
-  BuildingCost: 10
-  BuildingHealth: 2
+  BuildingCost: 15
+  BuildingHealth: 3
   BuildingPrefab: {fileID: 6080909274968267160, guid: 57366553223819a47be5dde06c53f821, type: 3}

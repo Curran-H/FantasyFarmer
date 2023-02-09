@@ -16,6 +16,6 @@ MonoBehaviour:
   BuildingName: Red Tulip
   BuildingWidth: 1
   BuildingHeight: 1
-  BuildingCost: 15
+  BuildingCost: 50
   BuildingHealth: 5
   BuildingPrefab: {fileID: 2047792134787719516, guid: 8e97a85fa85e9084a897cf48414ad244, type: 3}

@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 
-public class LaneSpawner : MonoBehaviour
-{
-
-
+public class LaneSpawner : MonoBehaviour {
     /// <summary>
     /// if true, prevents a lane from spawning anything
     /// </summary>
@@ -62,7 +59,5 @@ public class LaneSpawner : MonoBehaviour
     public void SetActive(bool active)
     {
         m_isActive = active;
-
     }
-    
 }

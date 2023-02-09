@@ -39,10 +39,22 @@ public class EnemyController : MonoBehaviour {
     }
 
     private void Update() {
+        if(Time.time >= m_slowClearTime) {
+            m_slow = 1f;
+        }
+
         if(m_enemyState != EnemyState.DEAD) {
             CheckForTower();
             UpdateState();
         }
+    }
+
+    private float m_slow = 1f;
+    private float m_slowClearTime;
+
+    public void ApplySlow(float amount, float duration) {
+        m_slow = amount;
+        m_slowClearTime = Time.time + duration;
     }
 
     public void TakeDamage(int amount) {
@@ -50,7 +62,7 @@ public class EnemyController : MonoBehaviour {
     }
 
     private void Move() {
-        transform.position += m_movementDirection * m_speed * Time.deltaTime;
+        transform.position += m_movementDirection * (m_speed * m_slow) * Time.deltaTime;
     }
 
     private void Attack() {
@@ -124,6 +136,7 @@ public class EnemyController : MonoBehaviour {
     }
 
     public void OnDeath() {
+        WaveManager.Instance.EnemyKilled();
         ChangeState(EnemyState.DEAD);
     }
 }

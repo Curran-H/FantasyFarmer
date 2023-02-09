@@ -25,8 +25,11 @@ public class CoinBush : TurretController {
     }
 
     public void Generate() {
+        m_amountToGenMin = Mathf.RoundToInt(WaveManager.Instance.EnemiesKilled * 0.005f);
         int amountToGen = Random.Range(m_amountToGenMin, m_amountToGetMax+1);
         
+
+
         for(int i=0; i<amountToGen; i++) {
             Vector3 genPos = transform.position + new Vector3(Random.Range(-1.25f, 2.25f), Random.Range(-1.25f, 2.25f), transform.position.z);
             GameObject go = Instantiate(m_toGenerate, genPos, Quaternion.identity);

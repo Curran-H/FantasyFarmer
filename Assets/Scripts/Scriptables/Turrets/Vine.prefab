@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f87a5da37fdceb4681973e73fe926c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_weaponCooldown: 0.25
+  m_weaponCooldown: 0.1
   m_fireMode: 1
   m_directions:
   - {x: 1, y: 0}
@@ -153,8 +153,8 @@ MonoBehaviour:
   m_canHit:
     serializedVersion: 2
     m_Bits: 256
-  m_damage: 1
-  m_speed: 20
+  m_damage: 2
+  m_speed: 8
 --- !u!114 &1038662998376043729
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -141,18 +141,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f87a5da37fdceb4681973e73fe926c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_weaponCooldown: 1.5
-  m_fireMode: 1
+  m_weaponCooldown: 4
+  m_fireMode: 0
   m_directions:
-  - {x: 1, y: 0}
+  - {x: 0, y: -1}
+  - {x: 0, y: 1}
   <RequiresTargetsToFire>k__BackingField: 1
   m_originOffset: {x: 0.5, y: 0.5, z: 0}
   m_toSpawn: {fileID: 8697833064610182738, guid: c31feaf755bc27944b021e9b577c53de, type: 3}
   m_canHit:
     serializedVersion: 2
     m_Bits: 256
-  m_damage: 0
-  m_speed: 0
+  m_damage: 2
+  m_speed: 3
 --- !u!114 &727269909317409352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,10 +167,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pierceTargets: 0
-  m_maxDistance: 10
+  m_maxDistance: 20
   m_raycastOffset: {x: 0.5, y: 0.5, z: 0}
   m_directions:
-  - {x: 1, y: 0}
+  - {x: 1, y: 1}
+  - {x: 1, y: -1}
   m_canHit:
     serializedVersion: 2
     m_Bits: 256

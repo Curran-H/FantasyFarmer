@@ -118,7 +118,7 @@ PrefabInstance:
     - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
       propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4455004729768900872}
     - target: {fileID: 7049349894263255725, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
       propertyPath: OnDeathcallback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -153,6 +153,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+--- !u!114 &4455004729768900872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4627232273551553981, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+  m_PrefabInstance: {fileID: 151890873627702091}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf787fc3ef4c78a49b10844bd69d7781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6452615510333274254 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6599977353661959109, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}

@@ -9,6 +9,10 @@ public class Projectile : MonoBehaviour {
     private float m_maxLifetime = 5f;
     private int m_damage;
     private LayerMask m_canHit;
+    [SerializeField] private bool m_slowsEnemy;
+    [SerializeField] private float m_slowDuration;
+    [SerializeField] private float m_slowAmount;
+
 
     public void Initialize(Vector2 direction, float speed, int damage, LayerMask canHit) {
         m_projectileSpeed = speed;
@@ -30,6 +34,9 @@ public class Projectile : MonoBehaviour {
     public void OnTriggerEnter2D(Collider2D collider) {
         EnemyController e = collider.GetComponentInParent<EnemyController>();
         if(e) {
+            if(m_slowsEnemy) {
+                e.ApplySlow(m_slowAmount, m_slowDuration);
+            }
             e.TakeDamage(m_damage);
             OnDeath();
         } 

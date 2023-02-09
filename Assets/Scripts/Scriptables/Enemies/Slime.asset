@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyName: Slime
   EnemyHealth: 10
-  EnemySpeed: 3
-  EnemyAttackTimer: 2
-  EnemyAttackRange: 0.15
+  EnemySpeed: 2
+  EnemyAttackTimer: 1
+  EnemyAttackRange: 0.5
   EnemyAttackDamage: 1

@@ -16,6 +16,6 @@ MonoBehaviour:
   BuildingName: Corn
   BuildingWidth: 1
   BuildingHeight: 1
-  BuildingCost: 5
-  BuildingHealth: 1
+  BuildingCost: 15
+  BuildingHealth: 5
   BuildingPrefab: {fileID: 2414348714845670919, guid: a4be9a1471617d04ba2bc892a694950e, type: 3}

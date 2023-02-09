@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 55514
+  controlID: 59208
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 55515
+  controlID: 59209
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 55492
+  controlID: 59153
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,10 +224,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 167}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c846f9ffc849f9ffca53f9ff3030faff4030faff5230fafff0b2feff2aabffff04d7ffff8ee9ffffe8faffff5a6e00001a6f0000629a0000749a00008a9a0000ae9a0000bc9a00001e9b0000349b0000689b0000ae9b0000c69b0000ec9b0000fa9b0000049c00001a9c00004c9c0000649c00006a9c0000bc6d0100b26e0100666f0100
+      m_ExpandedIDs: c846f9ffc849f9ffca53f9ff3030faff4030faff5230fafff0b2feff2aabffff04d7ffff8ee9ffffe8faffff5a6e00001a6f0000629a0000749a00008a9a0000ae9a0000bc9a00001e9b0000349b0000689b0000ae9b0000c69b0000ec9b0000fa9b0000049c00001a9c00004c9c0000649c00006a9c00009a6c0100bc6d0100146e0100b26e0100666f0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -810,8 +810,8 @@ MonoBehaviour:
     y: 579
     width: 1497
     height: 378
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -859,21 +859,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Shaders
+    - Assets/Scripts/Scriptables/Enemies
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Shaders
+  - Assets/Scripts/Scriptables/Enemies
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Projects\Unity\FantasyFarmer\FantasyFarmer
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 22720000
-    m_LastClickedID: 29218
+    scrollPos: {x: 0, y: 123}
+    m_SelectedIDs: 66810000
+    m_LastClickedID: 33126
     m_ExpandedIDs: 00000000f4710000f67100001e720000267200003672000042860000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -927,8 +927,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 646d0100
+    m_LastClickedInstanceID: 93540
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000a7500001c8c00000a71000056a4000072910000b0800000
     m_RenameOverlay:
@@ -1005,8 +1005,8 @@ MonoBehaviour:
     y: 0
     width: 423
     height: 957
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -1046,7 +1046,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 93540
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

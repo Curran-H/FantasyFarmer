@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Skeleton
   m_EditorClassIdentifier: 
   EnemyName: Skeleton
-  EnemyHealth: 12
-  EnemySpeed: 6
-  EnemyAttackTimer: 4
-  EnemyAttackRange: 0.1
-  EnemyAttackDamage: 2
+  EnemyHealth: 15
+  EnemySpeed: 1
+  EnemyAttackTimer: 6
+  EnemyAttackRange: 0.5
+  EnemyAttackDamage: 5
