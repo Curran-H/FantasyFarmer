@@ -16,6 +16,6 @@ MonoBehaviour:
   BuildingName: Pumpkin
   BuildingWidth: 1
   BuildingHeight: 1
-  BuildingCost: 10
-  BuildingHealth: 10
+  BuildingCost: 20
+  BuildingHealth: 15
   BuildingPrefab: {fileID: 969500295616618352, guid: 199aa97cce2d6904d934f44dc2115c66, type: 3}

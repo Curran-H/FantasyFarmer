@@ -189,7 +189,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Building>k__BackingField: {fileID: 11400000, guid: 000fdb6465f78ab4d92f6a51d691a9e1, type: 2}
+  m_buffNearbyTurretAttackSpeed: 0
+  m_attackSpeedBuffAmount: 0.1
+  m_buffRadius: 5
+  m_canBuff:
+    serializedVersion: 2
+    m_Bits: 0
   m_toGenerate: {fileID: 2385826706402065855, guid: bb157eec7c2cf6b48badc76c1a6a024e, type: 3}
   m_timeBetweenGeneration: 5
   m_amountToGenMin: 1
-  m_amountToGetMax: 3
+  m_amountToGetMax: 5
+  m_active: 1

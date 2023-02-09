@@ -176,13 +176,14 @@ MonoBehaviour:
   m_enemyCount: 0
   m_activeLaneIndexes: 
   m_maxPossibleActiveLanes: 3
-  m_minSpawnInterval: 1
-  m_maxSpawnInterval: 6
+  m_minSpawnInterval: 2
+  m_maxSpawnInterval: 10
   laneSwapInterval: 20
   m_elapsedTime: 0
   m_nextWaveElapsedTime: 0
-  m_changingSpawnTime: 0.5
+  m_changingSpawnTime: 2
   elapsedChangingSpawnTime: 0
+  m_startDelay: 5
   m_enemies:
   - {fileID: 6599977353661959108, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
   - {fileID: 6452615510333274255, guid: be896c2c4da48484aa2a6ab9923ebfe2, type: 3}
@@ -10788,7 +10789,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347213183}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 89206e53083f72f42910ef5f02f1a11c, type: 2}
   m_CullingMode: 0
@@ -12807,6 +12808,8 @@ MonoBehaviour:
   m_movementSpeed: 7
   m_selectedBuilding: {fileID: 11400000, guid: 000fdb6465f78ab4d92f6a51d691a9e1, type: 2}
   m_gold: 100
+  m_spriteRenderer: {fileID: 1347213185}
+  m_animator: {fileID: 1347213187}
 --- !u!4 &1670956782
 Transform:
   m_ObjectHideFlags: 0

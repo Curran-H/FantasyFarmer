@@ -22,6 +22,11 @@ public class ProjectileWeapon : Weapon {
                     CreateAndInitializeProjectile(direction);
                 }
             break;
+            case FireMode.RANDOM:
+                int index = Random.Range(0, m_directions.Count);
+                m_directionIndex = index;
+                CreateAndInitializeProjectile(m_directions[m_directionIndex]);
+            break;
         }        
     }
 

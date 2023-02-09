@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2061360700977208390}
   - component: {fileID: 5279597181929950816}
   - component: {fileID: 2878608459698209045}
+  - component: {fileID: 2149000496259197539}
   m_Layer: 7
   m_Name: Raddish
   m_TagString: Untagged
@@ -104,7 +105,7 @@ BoxCollider2D:
   m_Offset: {x: 0.4896388, y: 0.49643922}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     oldSize: {x: 0.8125, y: 0.875}
     newSize: {x: 1.3125, y: 1.5625}
     adaptiveTilingThreshold: 0.5
@@ -127,6 +128,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Building>k__BackingField: {fileID: 11400000, guid: 1acfab18655128d4c95f5e8ea03f0845, type: 2}
+  m_buffNearbyTurretAttackSpeed: 1
+  m_attackSpeedBuffAmount: 1
+  m_buffRadius: 5
+  m_canBuff:
+    serializedVersion: 2
+    m_Bits: 128
+  m_updateTargetTime: 1
 --- !u!114 &5279597181929950816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +176,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_doUpdate: 0
   m_percision: 100
+--- !u!114 &2149000496259197539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3598684464247596311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f87a5da37fdceb4681973e73fe926c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_weaponCooldown: 1
+  m_fireMode: 2
+  m_directions:
+  - {x: 1, y: 0}
+  - {x: -1, y: 0}
+  - {x: 0, y: 1}
+  - {x: 0, y: -1}
+  - {x: 1, y: 1}
+  - {x: 1, y: -1}
+  - {x: -1, y: 1}
+  - {x: -1, y: -1}
+  <RequiresTargetsToFire>k__BackingField: 0
+  m_originOffset: {x: 0.5, y: 0.5, z: 0}
+  m_toSpawn: {fileID: 5741993717431331802, guid: b4f1a4a1df6c1a54e8b935b7cbdecb78, type: 3}
+  m_canHit:
+    serializedVersion: 2
+    m_Bits: 256
+  m_damage: 1
+  m_speed: 5

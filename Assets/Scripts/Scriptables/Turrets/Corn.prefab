@@ -129,6 +129,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Building>k__BackingField: {fileID: 11400000, guid: 51ef72a8bd866ef42af49ef90534318d, type: 2}
+  m_buffNearbyTurretAttackSpeed: 0
+  m_attackSpeedBuffAmount: 0.1
+  m_buffRadius: 5
+  m_canBuff:
+    serializedVersion: 2
+    m_Bits: 0
+  m_updateTargetTime: 1
 --- !u!114 &4148240805084136269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +158,7 @@ MonoBehaviour:
   m_canHit:
     serializedVersion: 2
     m_Bits: 256
-  m_damage: 5
+  m_damage: 6
   m_speed: 8
 --- !u!114 &510006540892627692
 MonoBehaviour:

@@ -129,6 +129,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Building>k__BackingField: {fileID: 11400000, guid: 05f1e8ab43b25814ea626ed14c6b1ba6, type: 2}
+  m_buffNearbyTurretAttackSpeed: 0
+  m_attackSpeedBuffAmount: 0.1
+  m_buffRadius: 5
+  m_canBuff:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &323069833010899990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f87a5da37fdceb4681973e73fe926c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_weaponCooldown: 6
+  m_weaponCooldown: 3
   m_fireMode: 0
   m_directions:
   - {x: 1, y: 1}

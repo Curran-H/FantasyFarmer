@@ -16,6 +16,6 @@ MonoBehaviour:
   BuildingName: Carrot
   BuildingWidth: 1
   BuildingHeight: 1
-  BuildingCost: 25
+  BuildingCost: 30
   BuildingHealth: 10
   BuildingPrefab: {fileID: 3863718379072604273, guid: 9711825a17a53a64f9c84b39a715b8d2, type: 3}

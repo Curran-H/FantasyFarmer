@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour {
-    public enum FireMode { SIMUTANEOUS, ALTERNATING }
+    public enum FireMode { SIMUTANEOUS, ALTERNATING, RANDOM }
     
     [SerializeField] protected float m_weaponCooldown;
     protected float m_currentWeaponCooldown;

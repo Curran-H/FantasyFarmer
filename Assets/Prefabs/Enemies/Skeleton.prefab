@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4627232273551553981, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
       propertyPath: m_amountToGenMin
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -4627232273551553981, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
       propertyPath: m_amountToGetMax
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4276823081704810798, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
       propertyPath: m_Size.x

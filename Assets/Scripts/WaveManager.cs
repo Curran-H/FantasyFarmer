@@ -63,7 +63,9 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     [SerializeField] private float m_changingSpawnTime;
 
-    [SerializeField]private float elapsedChangingSpawnTime;
+    [SerializeField] private float elapsedChangingSpawnTime;
+
+    [SerializeField] private float m_startDelay = 5f;
 
     public List<GameObject> m_enemies = new List<GameObject>();//fill the list with different enemies and use their index to set what lanes spawn what specific enemy
 
@@ -90,6 +92,13 @@ public class WaveManager : MonoBehaviour
         m_elapsedTime = 0;
         m_laneSpawners = new LaneSpawner[transform.childCount];//the lanes are children of wavemanager so create an array that can fit all of them
         InitialiseLaneSpawners();
+        Invoke("StartingLanes", m_startDelay);
+    }
+
+    private void StartingLanes() {
+        SelectRandomActiveLanes();
+        SetSpawnIntervals();
+        ActivateLanes();
     }
 
     public void EnemyKilled() {
@@ -102,29 +111,23 @@ public class WaveManager : MonoBehaviour
         laneSwapInterval -= Mathf.RoundToInt(m_enemiesKilled * 0.0005f);
     }
 
-    private void Update()
-    {
-        waveOne();
+    private void Update() {
+        ManipulateLanes();
     }
 
-   void waveOne() {
+   private void ManipulateLanes() {
         elapsedChangingSpawnTime += Time.deltaTime;
         m_elapsedTime += Time.deltaTime;
 
-        if (elapsedChangingSpawnTime > m_changingSpawnTime) {
+        if (elapsedChangingSpawnTime >= m_changingSpawnTime) {
             SetSpawnIntervals();
             elapsedChangingSpawnTime = 0;
         }
 
-        
-        
-        if (m_elapsedTime > laneSwapInterval)
-        {
-
+        if (m_elapsedTime >= laneSwapInterval) {
             SelectRandomActiveLanes();
             ActivateLanes();
-            
-
+        
             m_elapsedTime = 0;
         }
     }

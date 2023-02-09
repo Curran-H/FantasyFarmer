@@ -80,7 +80,7 @@ public class EnemyController : MonoBehaviour {
         if(hit) {
             if(hit.collider.name == "Finish" && !m_isFading) {
                 Finish finish = hit.collider.GetComponent<Finish>();
-                finish.UpdateHealth(-Enemy.EnemyHealth);
+                finish.UpdateHealth(-m_health.CurrentHealth);
                 m_spriteRenderer.DOFade(0, 1f).SetEase(Ease.Linear).OnComplete(() => {
                     ReachFinishLine();
                 });
@@ -101,7 +101,6 @@ public class EnemyController : MonoBehaviour {
     }
 
     private void ReachFinishLine() {
-        // Deal damage, do malicious things
         ChangeState(EnemyState.DEAD);
     }
 

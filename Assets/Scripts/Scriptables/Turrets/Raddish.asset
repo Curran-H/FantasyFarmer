@@ -16,6 +16,6 @@ MonoBehaviour:
   BuildingName: Raddish
   BuildingWidth: 1
   BuildingHeight: 1
-  BuildingCost: 5
+  BuildingCost: 10
   BuildingHealth: 1
   BuildingPrefab: {fileID: 2061360700977208390, guid: 2192a0117bdb333488989d96f6e171f2, type: 3}

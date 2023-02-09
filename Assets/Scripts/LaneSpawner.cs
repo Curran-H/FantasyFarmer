@@ -33,13 +33,11 @@ public class LaneSpawner : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
+    void Update() {
         if (m_isActive)//if lane is not active
         {
             m_elapsedTime += Time.deltaTime;
-            if (m_elapsedTime > m_spawnTimeInterval)
+            if (m_elapsedTime >= m_spawnTimeInterval)
             {
                 SpawnEnemy();
                 m_elapsedTime = 0;

@@ -8,8 +8,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -4627232273551553981, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
-      propertyPath: m_amountToGetMax
+      propertyPath: m_amountToGenMin
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -4627232273551553981, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: m_amountToGetMax
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4276823081704810798, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
       propertyPath: m_Size.x

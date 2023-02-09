@@ -16,6 +16,6 @@ MonoBehaviour:
   BuildingName: Vineslide
   BuildingWidth: 1
   BuildingHeight: 1
-  BuildingCost: 25
+  BuildingCost: 20
   BuildingHealth: 5
   BuildingPrefab: {fileID: 2952258110418335802, guid: 0aadc85c7f583244ab4cae6c618f3c4d, type: 3}

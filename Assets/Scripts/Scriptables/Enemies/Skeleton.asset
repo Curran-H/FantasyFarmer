@@ -15,6 +15,6 @@ MonoBehaviour:
   EnemyName: Skeleton
   EnemyHealth: 15
   EnemySpeed: 1
-  EnemyAttackTimer: 6
+  EnemyAttackTimer: 3
   EnemyAttackRange: 0.5
   EnemyAttackDamage: 5

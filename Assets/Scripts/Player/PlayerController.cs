@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private int m_gold;
     public int Gold { get { return m_gold; }}
 
+    [SerializeField] private SpriteRenderer m_spriteRenderer;
+
     private void Awake() {
         if(Instance == null)
             Instance = this;
@@ -71,11 +73,23 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    [SerializeField] private Animator m_animator;
     private void CheckInput() {
         m_input = new Vector3(
             Input.GetAxisRaw("Horizontal"),
             Input.GetAxisRaw("Vertical")
         );
+
+        if(m_input.x > 0) {
+            m_spriteRenderer.flipX = false;
+            m_animator.SetBool("isWalking", true);
+        } 
+        if(m_input.x < 0) {
+            m_spriteRenderer.flipX = true;
+            m_animator.SetBool("isWalking", true);
+        } else if(m_input.x == 0) {
+            m_animator.SetBool("isWalking", false);
+        }
 
         if(Input.GetKeyDown(KeyCode.Q)) {
             if(m_playerState == PlayerState.IDLE) {
