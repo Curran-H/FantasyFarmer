@@ -99,6 +99,13 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
+        if(Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) ||
+           Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha6) || Input.GetKeyDown(KeyCode.Alpha7) ||
+           Input.GetKeyDown(KeyCode.Alpha8) || Input.GetKeyDown(KeyCode.Alpha9)) {
+                ChangeState(PlayerState.PLACING);
+        }
+
+
         if(Input.GetMouseButtonDown(0)) {
             if(m_playerState == PlayerState.PLACING) {
                 ChangeState(PlayerState.PLACE);
