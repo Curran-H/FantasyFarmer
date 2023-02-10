@@ -14,7 +14,6 @@ public class ShrinkAndReposition : MonoBehaviour
     private float timeElapsed = 0.0f;
 
     public bool shouldShrink = false;
-    public bool isPositioned = false;
 
     private void Start()
     {
@@ -36,7 +35,6 @@ public class ShrinkAndReposition : MonoBehaviour
             }
             else
             {
-                isPositioned = true;
                 shouldShrink = false;
             }
         }
