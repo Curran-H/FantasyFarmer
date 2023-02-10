@@ -55,6 +55,8 @@ public class UIManager : MonoBehaviour
             return;
         }
 
+        checkForNumbers();
+
         if (Input.GetKeyDown(KeyCode.Tab)) {
             if (gamePaused) {
                 Settings.SetActive(false);
@@ -120,6 +122,43 @@ public class UIManager : MonoBehaviour
             }
 
             BuildingManager.Instance.setBuilding(index);
+        }
+    }
+
+    public void changeNumeralSelected(int i) {
+        index = i - 1;
+        Selector.transform.position = slots[index].transform.position;
+        BuildingManager.Instance.setBuilding(index);
+    }
+
+    public void checkForNumbers() {
+        if (Input.GetKeyDown("1"))
+        {
+            changeNumeralSelected(1);
+        }
+        if (Input.GetKeyDown("2"))
+        {
+            changeNumeralSelected(2);
+        }
+        if (Input.GetKeyDown("3"))
+        {
+            changeNumeralSelected(3);
+        }
+        if (Input.GetKeyDown("4"))
+        {
+            changeNumeralSelected(4);
+        }
+        if (Input.GetKeyDown("5"))
+        {
+            changeNumeralSelected(5);
+        }
+        if (Input.GetKeyDown("6"))
+        {
+            changeNumeralSelected(6);
+        }
+        if (Input.GetKeyDown("7"))
+        {
+            changeNumeralSelected(7);
         }
     }
 
