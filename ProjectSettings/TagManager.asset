@@ -41,9 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Canvas
-    uniqueID: 2735342209
-    locked: 0
-  - name: Title Object
-    uniqueID: 3184562663
-    locked: 0
