@@ -3,47 +3,42 @@ using UnityEngine;
 
 public class DissolveEffect : MonoBehaviour
 {
-    public Transform transformToShrink;
+    //public Transform transformToShrink;
 
     private Material material;
     private float fade = 0f;
-    private const float WAIT_TIME = 3.0f;
+    private const float WAIT_TIME = .5f;
+    public bool isMaterialized = false;
 
     private void Start()
     {
-        Renderer renderer = GetComponent<Renderer>();
+        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         if (renderer != null)
         {
             material = renderer.material;
+            if (material == null)
+            {
+                Debug.LogError("Material not found on object: " + gameObject.name);
+                return;
+            }
         }
         else
         {
-            Debug.LogError("Renderer component not found on object: " + gameObject.name);
+            Debug.LogError("SpriteRenderer component not found on object: " + gameObject.name);
+            return;
         }
 
         fade = 0.0f;
         material.SetFloat("_Fade", fade);
-
-        transformToShrink = GetComponent<Transform>();
     }
 
-    private void Update()
+    public IEnumerator Dissolve()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (material == null)
         {
-            if (fade == 1.0f)
-            {
-                StartCoroutine(Dissolve());
-            }
-            else if (fade == 0.0f)
-            {
-                StartCoroutine(Materialize());
-            }
+            yield break;
         }
-    }
 
-    private IEnumerator Dissolve()
-    {
         while (fade > 0.0f)
         {
             fade -= Time.deltaTime / 2;
@@ -55,8 +50,13 @@ public class DissolveEffect : MonoBehaviour
         material.SetFloat("_Fade", fade);
     }
 
-    private IEnumerator Materialize()
+    public IEnumerator Materialize()
     {
+        if (material == null)
+        {
+            yield break;
+        }
+
         while (fade < 1.0f)
         {
             fade += Time.deltaTime / 2;
@@ -68,8 +68,6 @@ public class DissolveEffect : MonoBehaviour
 
         // wait for the specified time
         yield return new WaitForSeconds(WAIT_TIME);
-
-        // shrink the object
-        ShrinkAndReposition shrink = transformToShrink.gameObject.GetComponent<ShrinkAndReposition>();
+        isMaterialized = true;
     }
 }
