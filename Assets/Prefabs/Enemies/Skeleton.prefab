@@ -103,6 +103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 6599977353661959108, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
+      propertyPath: m_TagString
+      value: Skeleton
+      objectReference: {fileID: 0}
     - target: {fileID: 6599977353661959109, guid: cc760752756fe2a4dbb132de52ae596d, type: 3}
       propertyPath: <Enemy>k__BackingField
       value: 
